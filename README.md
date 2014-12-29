@@ -7,11 +7,11 @@ Python bindings for OSQuery
 
 This is the README file for osquery-python
 
-There are many like it, but this one is mine.
+Example Usage:
+osquery = osquery()
+osquery.setOutputMode("--json").query("SELECT * from etc_hosts")
 
 ## Todo
 
-[ ] Update README file with something useful about the project
-[ ] Write code
-[ ] Ship code
-[ ] Profit!
+[ ] Add SWIG Interfaces
+[ ] Package
