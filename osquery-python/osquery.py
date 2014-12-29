@@ -5,7 +5,7 @@ import subprocess
 TODO: use SWIG to bind to Cpp osquery code
 '''
 class osquery:
-    outputMode = "--json" 
+    outputMode = "--json"
     ''' Set the output mode to use
 
     Known supported options: csv, json, html, line, list
@@ -13,10 +13,10 @@ class osquery:
     def setOutputMode(self, mode):
        self.outputMode = mode
        return self
-    
+
     ''' Perform an osquery
 
-    Returns the result of the osquery 
+    Returns the result of the osquery
     '''
     def query(self, cmd):
        p1 = subprocess.Popen(["echo", cmd, ";"], stdout=subprocess.PIPE)
@@ -25,5 +25,3 @@ class osquery:
        output,err = p2.communicate()
        return output
 
-osquery = osquery()
-osquery.setOutputMode("--json").query("SELECT * from etc_hosts")

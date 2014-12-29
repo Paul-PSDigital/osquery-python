@@ -8,8 +8,10 @@ Python bindings for OSQuery
 This is the README file for osquery-python
 
 Example Usage:
+from osquery import osquery
+
 osquery = osquery()
-osquery.setOutputMode("--json").query("SELECT * from etc_hosts")
+print osquery.setOutputMode("--json").query("SELECT * from etc_hosts")
 
 ## Todo
 
